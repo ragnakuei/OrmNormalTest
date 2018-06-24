@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using OrmTest.EF;
 
 namespace OrmTest.DAL
 {
-    internal class EfDAL : IDisposable , IDAL
+    public class EfDAL : IDisposable , IDAL
     {
         private bool isDisposed = false;
 
@@ -17,6 +18,8 @@ namespace OrmTest.DAL
         {
             _dbContext = dbContext;
             _dbContext.Configuration.AutoDetectChangesEnabled = false;
+            //_dbContext.Configuration.ProxyCreationEnabled  = false;
+            //_dbContext.Configuration.LazyLoadingEnabled   = false;
         }
 
         public List<Customer> Get()

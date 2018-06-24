@@ -9,7 +9,7 @@ using OrmTest.EF;
 
 namespace OrmTest.DAL
 {
-    internal class DapperDAL : IDAL
+    public class DapperDAL : IDAL
     {
         private static string _connectionString;
 

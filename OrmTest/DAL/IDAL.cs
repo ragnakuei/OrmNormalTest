@@ -3,7 +3,7 @@ using OrmTest.EF;
 
 namespace OrmTest.DAL
 {
-    internal interface IDAL
+    public interface IDAL
     {
         List<Customer> Get();
     }

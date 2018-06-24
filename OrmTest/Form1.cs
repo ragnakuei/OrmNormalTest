@@ -14,6 +14,12 @@ namespace OrmTest
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            _dapperDAL = new DapperDAL();
+            _efDAL     = new EfDAL();
+        }
+
         public int Count { get; private set; } = 1000;
 
         private void btnDapper_Click(object sender, EventArgs e)
@@ -59,10 +65,6 @@ namespace OrmTest
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            _dapperDAL = new DapperDAL();
-            _efDAL     = new EfDAL();
-        }
+
     }
 }
